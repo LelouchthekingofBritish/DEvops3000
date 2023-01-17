@@ -1,0 +1,12 @@
+[Unit]
+Description=Folder Daemon Service
+After=network.target
+
+[Service]
+ExecStart=/vagrant/folder-daemon.sh
+RestartSec=5s
+Restart=on-failure
+User=vagrant
+
+[Install]
+WantedBy=multi-user.target
